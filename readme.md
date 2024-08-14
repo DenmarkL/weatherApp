@@ -1,47 +1,47 @@
-How to run
+# Weather App
 
-There are 2 folders named weather-app and weather-app-backend
+## How to Run
 
-weather-app-backend
-1. Navigate to the weather-app-backend folder.
-2. Run composer install to install the necessary PHP dependencies.
-3. Open .env.example and create a new .env file.
-4. Start the server by running php artisan serve.
+### weather-app-backend
+1. Navigate to the `weather-app-backend` folder.
+2. Run `composer install` to install the necessary PHP dependencies.
+3. Open `.env.example` and create a new `.env` file.
+4. Start the server by running `php artisan serve`.
 
-weather-app
-1. Navigate to the weather-app folder.
-2. Run npm run dev to start the development server.
+### weather-app
+1. Navigate to the `weather-app` folder.
+2. Run `npm run dev` to start the development server.
 3. Open the provided link in your browser to access the weather app.
-____________________________________________________________________________
 
-Please provide explanation on why your UI and UX implementation and code implementation is the best.
+## Explanation of UI, UX, and Code Implementation
 
-I created a separate front-end and backend on this app so that it:
+### Front-End and Back-End Separation
 
-• Maintain separation of concerns, making development and maintenance easier.
-• Allows independent scaling if front-end and back-end to handle varying loads
-• Facilitates separate deployment, reducing downtime and allowin for flexible updates
-• Isolates cloent-side and server-side components, improving security measures
+- **Separation of Concerns:** Keeps development and maintenance tasks distinct and more manageable.
+- **Independent Scaling:** Allows scaling of the front-end and back-end independently to handle varying loads.
+- **Separate Deployment:** Facilitates flexible updates and reduces downtime.
+- **Improved Security:** Isolates client-side and server-side components to enhance security measures.
 
-For the Back-end (Laravel)
-• I create apiKeys inside app.php. Storing sensitive information like API keys in configuration files follows best practices for application security
-• Create separate controllers for Place Search and Weather retrieval. Each controller focuses on a specific responsibility and makes codebase more organized. It also makes it reusable.
-• I created a laravel Validation to ensure that data meets specific criteria before processing. It also prevents invalid or malicious data from entering the application.
-• I used guzzle tool for managing the OpenWeatherMap and geoapify API.
+### Back-End (Laravel)
 
+- **API Key Management:** API keys are stored in `app.php` for secure management, following best practices for application security.
+- **Separate Controllers:** Controllers for Place Search and Weather Retrieval focus on specific responsibilities, improving code organization and reusability.
+- **Laravel Validation:** Ensures data meets criteria before processing, preventing invalid or malicious data entry.
+- **Guzzle Integration:** Used for managing API requests to OpenWeatherMap and Geoapify, providing robust API handling.
 
-For the Front End (Nuxt.js, tailwind, shadcn) 
+### Front-End (Nuxt.js, Tailwind CSS, ShadCN)
 
-User Experience 
-• It has simple and straightforward interface. Users can search and view weather updates with minimal effort, making the app accessible even for those with limited technical skills.
-• The search feature with autofill suggestions streamlines the user experience. By focusing on places in Japan, the app ensures users can quickly find relevant locations without navigating through unnecessary options.
-• Upon selecting a place, users instantly receive weather information. This responsiveness enhances user satisfaction by providing quick and relevant results, minimizing wait times.
-• The app’s design prioritizes clarity by displaying current weather conditions alongside short-term forecasts (3, 6, 9, and 12 hours). This approach prevents information overload and allows users to easily understand weather patterns at a glance.
-• The app features a responsive design, ensuring that it displays optimally on mobile devices.
+#### User Experience
 
-Code
-• I used tailwind css for rapid styling, consistency and reducing the need for custom CSS
-• I used shadcn for customizable and reusable components that can accelerate development. It also works seamlessly with Tailwind CSS.
-• My code design utilizes custom components to minimize repetitive code. By centralizing component management, any customizations are applied consistently across the application, which helps maintain a clean and easily understandable codebase.
+- **Simple Interface:** Offers an easy-to-use interface for searching and viewing weather updates, accessible even to users with limited technical skills.
+- **Autofill Suggestions:** Streamlines the search experience by focusing on places in Japan, helping users find relevant locations quickly.
+- **Instant Weather Information:** Provides immediate weather updates upon place selection, enhancing user satisfaction and reducing wait times.
+- **Clear Design:** Displays current weather and short-term forecasts (3, 6, 9, and 12 hours) to prevent information overload and simplify understanding.
+- **Responsive Design:** Ensures optimal display and usability across mobile devices.
 
+#### Code
+
+- **Tailwind CSS:** Facilitates rapid styling, ensures consistency, and reduces the need for custom CSS.
+- **ShadCN:** Provides customizable and reusable components that accelerate development and integrate seamlessly with Tailwind CSS.
+- **Custom Components:** Utilizes custom components to minimize repetitive code, centralize management, and maintain a clean, easily understandable codebase.
 
